@@ -6,7 +6,7 @@ const start = async () => {
         throw new Error("JWT_KET must be defined");
 
     if(!process.env.MONGO_URI)
-        throw new Error("MONGO_URI must be defined");    
+        throw new Error("MONGO_URI must be defined");   
         
     try {
         await mongoose.connect(process.env.MONGO_URI, {
@@ -20,7 +20,7 @@ const start = async () => {
     }
 
     app.listen(3000, () => {
-        console.log("Auth service is Listening on 3000!!!");
+        console.log("Ticketing service is Listening on 3000!!!");
     });
 };
 
